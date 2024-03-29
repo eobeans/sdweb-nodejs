@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "step1：创建一个新文件夹",
+  "main": "bin/www.js",
+  "scripts": {
+    "dev": "nodemon bin/www.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "qiniu": "^7.7.0",
+    "request": "^2.88.2"
+  },
+  "bin": {
+    "project": "bin/www.js"
+  }
+}
