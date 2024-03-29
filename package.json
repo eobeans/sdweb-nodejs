@@ -1,7 +1,7 @@
 {
-  "name": "project",
+  "name": "sdweb-server",
   "version": "1.0.0",
-  "description": "step1：创建一个新文件夹",
+  "description": "stableDiffution的nodejs服务器",
   "main": "bin/www.js",
   "scripts": {
     "dev": "nodemon bin/www.js"
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^3.1.0"
   },
   "dependencies": {
     "mysql": "^2.18.1",

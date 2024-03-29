@@ -1,4 +1,2 @@
 node_modules
 /config*/
-/src/controllers/upload.js
-/src/controllers/baiduApi.js
