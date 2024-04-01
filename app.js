@@ -9,6 +9,7 @@ const handleProjectRoute = require('./src/routes/project');
 const handleProjectConsRoute = require('./src/routes/projectCons');
 const handleUploadRoute = require('./src/routes/upload');
 const handleBaiduApiRoute = require('./src/routes/baiduApi');
+const handleImgServerRoute = require('./src/routes/imgServer');
 
 
 // 处理post数据
@@ -77,6 +78,16 @@ const serverHandler = (req, res) => {
 	// 处理 POST 数据
 	getPostData(req).then((postData) => {
 		req.body = postData;
+
+		// 图片评分相关的路由
+		const imgServerPromise = handleImgServerRoute(req, res);
+		if (imgServerPromise) {
+			imgServerPromise.then(resData => {
+				res.end(JSON.stringify(resData));
+			});
+			return;
+		}
+
 		// 博客相关的路由
 		const blogDataPromise = handleBlogRoute(req, res);
 		if (blogDataPromise) {
