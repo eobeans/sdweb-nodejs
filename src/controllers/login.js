@@ -12,4 +12,13 @@ const loginFun = (username, password) => {
 	});
 }
 
-module.exports = { loginFun }
+// 登录方法
+const userInfoFun = (token) => {
+	console.log('token', token)
+	const sql = `select * from login where token='${token}'`;
+	return execSQL(sql).then(loginResult => {
+		return loginResult[0];
+	});
+}
+
+module.exports = { loginFun, userInfoFun }
